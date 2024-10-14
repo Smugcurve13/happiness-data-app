@@ -26,10 +26,12 @@ match yaxis:
     case "Generosity":
         y_array = df['generosity']
 
-print(xaxis,yaxis)
+# print(xaxis,yaxis)
 
 
 st.subheader(f'{xaxis} and {yaxis}')
 
-figure = px.scatter(df, x=x_array,y=y_array,labels={'x':xaxis,'y':yaxis})
+figure = px.scatter(df, x=x_array,y=y_array,labels={'x':xaxis.title(),'y':yaxis.title()})
+
+print(xaxis,yaxis)
 st.plotly_chart(figure)
