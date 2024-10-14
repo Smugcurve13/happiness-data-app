@@ -11,5 +11,6 @@ yaxis = st.selectbox("Select the Data for Y-Axis",['gdp','happiness','generosity
 
 st.subheader(f'{xaxis.title()} and {yaxis.title()}')
 
-figure = px.scatter(df, x=xaxis,y=yaxis,labels={'x':xaxis.title(),'y':yaxis.title})
+
+figure = px.scatter(df, x=xaxis,y=yaxis,labels={'x':xaxis.upper(),'y':yaxis.upper()})
 st.plotly_chart(figure)
